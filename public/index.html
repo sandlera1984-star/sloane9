@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SloaneX</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="logo">SloaneX</div>
+      <nav class="nav-links">
+        <button class="nav-button" data-target="landing">Home</button>
+        <button class="nav-button" data-target="home">Exclusive Content</button>
+        <button class="nav-button" data-target="admin">Admin</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="landing" class="page active">
+        <div class="landing-hero">
+          <div class="landing-text">
+            <h1>SloaneX</h1>
+            <p>sign up for exclusive content</p>
+            <div class="signup-row">
+              <button id="signup-button" class="signup-button">Sign Up</button>
+              <span class="price-text">5 CAD a month</span>
+            </div>
+          </div>
+        </div>
+        <div class="landing-media">
+          <div class="banner" id="banner-display">
+            <span>Banner Image</span>
+          </div>
+          <div class="profile-wrapper">
+            <div class="profile-image" id="profile-display">
+              <span>Profile Image</span>
+            </div>
+          </div>
+        </div>
+        <div id="signup-pop" class="signup-pop" aria-hidden="true">
+          <span>Under Construction</span>
+        </div>
+      </section>
+
+      <section id="home" class="page">
+        <div class="home-layout">
+          <aside class="sidebar">
+            <button class="side-button" data-target="home">Home</button>
+            <button class="side-button" data-target="account">Account</button>
+            <button class="side-button" data-target="support">Support</button>
+            <button class="side-button" data-target="contact">Contact</button>
+          </aside>
+          <div class="home-content">
+            <h2>Exclusive Content</h2>
+            <div class="content-grid">
+              <div>
+                <h3>Images</h3>
+                <div id="image-column" class="media-column"></div>
+              </div>
+              <div>
+                <h3>Videos</h3>
+                <div id="video-column" class="media-column"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="account" class="page">
+        <div class="home-layout">
+          <aside class="sidebar">
+            <button class="side-button" data-target="home">Home</button>
+            <button class="side-button" data-target="account">Account</button>
+            <button class="side-button" data-target="support">Support</button>
+            <button class="side-button" data-target="contact">Contact</button>
+          </aside>
+          <div class="home-content">
+            <div class="construction">
+              <h2>Under Construction</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="support" class="page">
+        <div class="home-layout">
+          <aside class="sidebar">
+            <button class="side-button" data-target="home">Home</button>
+            <button class="side-button" data-target="account">Account</button>
+            <button class="side-button" data-target="support">Support</button>
+            <button class="side-button" data-target="contact">Contact</button>
+          </aside>
+          <div class="home-content">
+            <div class="construction">
+              <h2>Under Construction</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admin" class="page">
+        <div class="admin-panel">
+          <h2>Admin Uploads</h2>
+          <div class="admin-access">
+            <label for="admin-code">Admin Access Code</label>
+            <div class="admin-code-row">
+              <input id="admin-code" type="password" placeholder="Enter code" />
+              <button id="unlock-button">Unlock Uploads</button>
+            </div>
+            <p id="admin-status" class="status-text">Uploads locked.</p>
+          </div>
+
+          <div class="upload-grid">
+            <div class="upload-card" data-upload="images">
+              <h3>Upload Images</h3>
+              <div class="drop-zone" data-drop="images">
+                <p>Drag & drop images here or click to browse.</p>
+                <input type="file" accept="image/*" multiple hidden />
+              </div>
+              <div class="progress-wrapper">
+                <progress max="100" value="0"></progress>
+                <span class="progress-text">0s · 0%</span>
+              </div>
+            </div>
+            <div class="upload-card" data-upload="videos">
+              <h3>Upload Videos</h3>
+              <div class="drop-zone" data-drop="videos">
+                <p>Drag & drop videos here or click to browse.</p>
+                <input type="file" accept="video/*" multiple hidden />
+              </div>
+              <div class="progress-wrapper">
+                <progress max="100" value="0"></progress>
+                <span class="progress-text">0s · 0%</span>
+              </div>
+            </div>
+            <div class="upload-card" data-upload="banner">
+              <h3>Banner Image</h3>
+              <div class="drop-zone" data-drop="banner">
+                <p>Upload a banner image for the home page.</p>
+                <input type="file" accept="image/*" hidden />
+              </div>
+              <div class="progress-wrapper">
+                <progress max="100" value="0"></progress>
+                <span class="progress-text">0s · 0%</span>
+              </div>
+            </div>
+            <div class="upload-card" data-upload="profile">
+              <h3>Profile Circle Image</h3>
+              <div class="drop-zone" data-drop="profile">
+                <p>Upload a circular profile image for the home page.</p>
+                <input type="file" accept="image/*" hidden />
+              </div>
+              <div class="progress-wrapper">
+                <progress max="100" value="0"></progress>
+                <span class="progress-text">0s · 0%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="terms-modal" class="modal" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <h2>Terms of Agreement</h2>
+        <div id="terms-scroll" class="terms-scroll" tabindex="0">
+          <p>
+            By accessing this site and purchasing digital content, you agree that
+            all sales are final and no refunds will be issued. Content is
+            provided as-is without warranties of any kind. You are solely
+            responsible for complying with local laws regarding online content
+            consumption. The creator is not liable for any damages, losses, or
+            disputes arising from use of the content or services. You agree not
+            to redistribute, resell, or share any purchased content. Unauthorized
+            distribution is strictly prohibited and may result in legal action.
+            Payments are processed through third-party providers, and you agree
+            to their terms. Subscriptions renew automatically unless canceled
+            prior to the renewal date. Access may be revoked for violations of
+            these terms. All intellectual property remains with the creator. By
+            continuing, you acknowledge that you are of legal age to view and
+            purchase adult content where applicable.
+          </p>
+          <p>
+            Additional liability protections: You accept that network issues may
+            impact access and the creator is not responsible for outages. You
+            accept that any disputes will be governed by applicable laws in your
+            jurisdiction. You acknowledge that you have read and understand
+            these terms fully.
+          </p>
+        </div>
+        <div id="terms-actions" class="terms-actions hidden">
+          <button id="agree-button">Agree</button>
+          <button id="age-button">I Am Over 18 Years Of Age</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-modal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <h2>Contact Support</h2>
+        <form id="contact-form">
+          <label for="contact-email">Email</label>
+          <input id="contact-email" type="email" required />
+
+          <label for="contact-issue">Issue</label>
+          <select id="contact-issue" required>
+            <option value="Payment">Payment</option>
+            <option value="Account">Account</option>
+            <option value="Subscription">Subscription</option>
+          </select>
+
+          <label for="contact-description">Description (200 words max)</label>
+          <textarea id="contact-description" rows="5" required></textarea>
+          <p id="word-count" class="word-count">0 / 200 words</p>
+
+          <button type="submit" class="send-button">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
