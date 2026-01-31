@@ -1,0 +1,16 @@
+{
+  "name": "sloane9",
+  "version": "1.0.0",
+  "description": "SloaneX landing page",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
